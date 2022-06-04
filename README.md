@@ -4,6 +4,8 @@ A checker for four-part writing according to *Harmony and Voice Leading (4th edi
 
 Author: Clare Lin, Shan, Guava
 
+Advisor: Su Li
+
 For Chinese discription, please visit: https://hackmd.io/gILpjFSjR32yqLqEd0H31A?view
 
 This code can run on python 3.8+. Package music21 and MuseScore app is required.
