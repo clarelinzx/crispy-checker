@@ -1,4 +1,4 @@
-# crispy-monitor
+# crispy-checker
 
 A checker for four-part writing according to *Harmony and Voice Leading (4th edition)*
 
