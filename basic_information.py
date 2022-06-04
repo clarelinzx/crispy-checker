@@ -308,16 +308,15 @@ def xml_to_df(xml_str):
     if Harmo:
         note_table['scale degree'] = Harmo
     
-    return note_table, info_table
+    return info_table, note_table
 
 class Sample:    
-    def __init__(self, file_path, file_path_xlsx=None):
+    def __init__(self, file_path):
         with open(file_path, 'r', encoding = 'utf-8') as stream:
             xml_str = stream.read()
             
         self.xml_str = xml_str
-        #self.df_info = pd.read_excel(file_path_xlsx, sheet_name='Info')
-        self.df_score, self.df_info = xml_to_df(xml_str)
+        self.df_info, self.df_score = xml_to_df(xml_str)
         
     def get_info(self, show_key_sign_and_time_sign=True):
         print(f"{'-'*20}{'df_info':^10}{'-'*20}")
