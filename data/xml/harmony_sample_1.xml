@@ -7,7 +7,7 @@
   <identification>
     <encoding>
       <software>MuseScore 3.6.2</software>
-      <encoding-date>2022-06-01</encoding-date>
+      <encoding-date>2022-06-04</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" attribute="new-page" type="yes" value="yes"/>
@@ -45,7 +45,7 @@
     </credit>
   <credit page="1">
     <credit-type>subtitle</credit-type>
-    <credit-words default-x="600.241" default-y="1554.06" justify="center" valign="top" font-size="16">Key: A</credit-words>
+    <credit-words default-x="600.241" default-y="1554.06" justify="center" valign="top" font-size="16">Key:A</credit-words>
     </credit>
   <part-list>
     <score-part id="P1">

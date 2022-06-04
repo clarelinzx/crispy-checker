@@ -10,7 +10,7 @@ Created on Tue May 31 23:57:15 2022
 
 from harmony_checker import Harmony_checker
 
-file = 'harmony_sample_3'
+file = 'harmony_sample_8'
 file_path = f'./data/xml/{file}.xml'
 file_output_path = f'./output/{file}_output.xlsx'
 

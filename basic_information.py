@@ -6,12 +6,10 @@ Created on Tue May 31 23:46:10 2022
 @author: clarelin
 """
 
-import os
 import sys
 import numpy as np
 import pandas as pd
 import music21 as m21
-from itertools import combinations
 
 #FOUR_PART_VOICES = ['S', 'A', 'T', 'B']
 #OUTTER_VOICES = ['S', 'B']
