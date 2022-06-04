@@ -312,6 +312,7 @@ def xml_to_df(xml_str):
 
 class Sample:    
     def __init__(self, file_path):
+        """Read the xml file and transfer into pd.DataFrame."""
         with open(file_path, 'r', encoding = 'utf-8') as stream:
             xml_str = stream.read()
             
@@ -319,6 +320,10 @@ class Sample:
         self.df_info, self.df_score = xml_to_df(xml_str)
         
     def get_info(self, show_key_sign_and_time_sign=True):
+        """Transfer str variable to music21 object. 
+        If you haven't installed musescore or set its path in music21 package, please set show_key_sign_and_time_sign as False.
+        Required: time signature and key signature
+        Optional: Lecture, Type, Mode (by question), and Key (by student)"""
         print(f"{'-'*20}{'df_info':^10}{'-'*20}")
         
         # Required
@@ -365,6 +370,8 @@ class Sample:
         self.lecture = lecture
         
     def get_score(self):
+        """Get the scale_degree and number and name of voices."""
+
         print(f"{'-'*20}{'df_score':^10}{'-'*20}")
         
         # Required: 此題有幾個聲部
@@ -381,6 +388,10 @@ class Sample:
         self.scale_degree = scale_degree
         
     def check_key(self):
+        """Check the key and mode by information in self.df_info and self.df_score, 
+        because it is hard for computer to 'see' the key and mode, and students might
+         not input a key or input a wrong tonality."""
+         
         if pd.notna(self.question_mode):   # 題目有提供大調或小調
             try:
                 key = self.key_sign.asKey(mode=self.question_mode)
