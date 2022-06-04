@@ -3,6 +3,7 @@
 A checker for four-part writing according to *Harmony and Voice Leading (4th edition)*
 
 Author: Clare Lin, Shan, Guava
+Advisor: Su Li
 
 For Chinese discription, please visit: https://hackmd.io/gILpjFSjR32yqLqEd0H31A?view
 
