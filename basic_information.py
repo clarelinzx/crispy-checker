@@ -51,9 +51,9 @@ def detect_key_by_key_sign(key_sign, question_type, VOICES, df, key_student):
     if pd.notna(question_type):  # 題目有提供高音題 or 低音題
         if question_type=='B':   # 低音題: 因為必結束在一級原位, 直接看最後一個音即可
             ending_note = m21.note.Note(df.iloc[-1,:][question_type]).name
-            if ending_note==possible_key_major.tonic:
+            if ending_note==possible_key_major.tonic.name:
                 key = possible_key_major
-            elif ending_note==possible_key_minor.tonic:
+            elif ending_note==possible_key_minor.tonic.name:
                 key = possible_key_minor
             else:
                 sys.stderr.write(f"something wrong with question_type {question_type} and the ending note {ending_note}")
@@ -65,7 +65,7 @@ def detect_key_by_key_sign(key_sign, question_type, VOICES, df, key_student):
             ending_note = m21.note.Note(df.iloc[-1,:][question_type]).name
             if ending_note==possible_key_major.pitchFromDegree(5).name:  # 大調 音級5
                 key = possible_key_major
-            elif ending_note==possible_key_minor.tonic:                  # 小調 音級1
+            elif ending_note==possible_key_minor.tonic.name:                  # 小調 音級1
                 key = possible_key_minor
             else:                                                         # 大調 音級 1,3 == 小調音級 3,5
                 # 看 S 旋律中有沒有導音升高 -> 有: 小調, 沒有: 大調. 預設未知
